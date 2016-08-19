@@ -1,12 +1,16 @@
 <?php
 
-require_once("src/functions_utils.php");
-require_once("src/model/JksTrackStats.php");
-require_once("src/model/JksTrackJob.php");
+require_once("sources/functions_utils.php");
+require_once("sources/model/JksTrackStats.php");
+require_once("sources/model/JksTrackJob.php");
 
 
 /**
+ * Display header
+ * @author Samuel COLiN <https://github.com/samuel-colin>
+ * @since 1.0
  *
+ * @return string : The HTML stream of headers page
  */
 function display_header () {
     $html  = "<!DOCTYPE html>";
@@ -21,8 +25,17 @@ function display_header () {
     return $html;
 }
 
+
 /**
+ * Display content
+ * @author Samuel COLiN <https://github.com/samuel-colin>
+ * @since 1.0
  *
+ * @param string $title       : Title of the part
+ * @param string $file        : Configuration file
+ * @param string $url_jenkins : Jenkins URL
+ *
+ * @return string : The HTML stream of headers page
  */
 function display_content($title, $file, $url_jenkins) {
     $listJobs  = get_list_jobs_name_by_file($file);
@@ -47,8 +60,16 @@ function display_content($title, $file, $url_jenkins) {
     return $html;
 }
 
+
 /**
+ * Display statistics part
+ * @author Samuel COLiN <https://github.com/samuel-colin>
+ * @since 1.0
  *
+ * @param string $p_list_jobs        : List of all Jenkins jobs
+ * @param string $p_list_enable_jobs : List of all jobs in the configuration file
+ *
+ * @return string : The HTML stream of headers page
  */
 function display_stats($p_list_jobs, $p_list_enable_jobs) {
     $jks_track_stats = new JksTrackStats();
@@ -66,8 +87,16 @@ function display_stats($p_list_jobs, $p_list_enable_jobs) {
     return $html;
 }
 
+
 /**
+ * Display jobs part
+ * @author Samuel COLiN <https://github.com/samuel-colin>
+ * @since 1.0
  *
+ * @param string $p_list_jobs        : List of all Jenkins jobs
+ * @param string $p_list_enable_jobs : List of all jobs in the configuration file
+ *
+ * @return string : The HTML stream of headers page
  */
 function display_jobs ($p_list_jobs, $p_list_enable_jobs) {
     $html = "<table>";
@@ -110,8 +139,13 @@ function display_jobs ($p_list_jobs, $p_list_enable_jobs) {
     return $html;
 }
 
+
 /**
+ * Display footer
+ * @author Samuel COLiN <https://github.com/samuel-colin>
+ * @since 1.0
  *
+ * @return string : The HTML stream of headers page
  */
 function display_footer() {
     $html  = "</body>";
