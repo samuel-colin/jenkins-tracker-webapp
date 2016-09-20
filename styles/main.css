@@ -4,7 +4,6 @@ body {
 
 table {
     float : left;
-    margin-top : 10px;
 }
 
 div {
@@ -39,7 +38,7 @@ a:hover {
 h3 {
     background-color : black;
     color : white;
-    padding : 5px 0 5px 20px;
+    padding : 5px 0 0px 20px;
     margin-top : 10px;
 }
 
@@ -47,6 +46,11 @@ h2 {
     margin-bottom : 0;
     text-align : center;
     width : 100%;
+}
+
+h5 {
+    color : grey;
+    text-align : right;
 }
 
 #one-job {
