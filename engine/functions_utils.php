@@ -28,7 +28,7 @@
     }
 
     function getJobsByView ($view) {
-        $objJson = callWebService("http://pic-java/jenkins/view/$view/api/json");
+        $objJson = callWebService("http://jenkins/view/$view/api/json");
         return $objJson->{'jobs'};
     }
     
