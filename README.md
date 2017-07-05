@@ -3,6 +3,8 @@ A webapp for checking Jenkins's jobs
 
 ## Technology
 - PHP
+- HTML & CSS
 
 ## License
-BSD, See License.txt for details
+GNU General Public License v3.0.
+See License.txt for details
