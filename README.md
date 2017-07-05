@@ -1,8 +1,8 @@
 # Jenkins-Tracker-Webapp
 A webapp for checking Jenkins's jobs
 
-##Technology
+## Technology
 - PHP
 
-##License
+## License
 BSD, See License.txt for details
